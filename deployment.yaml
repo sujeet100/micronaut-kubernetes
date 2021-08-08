@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-service-deployment
+  labels:
+    app: my-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: MyApp
+  template:
+    metadata:
+      labels:
+        app: MyApp
+    spec:
+      containers:
+        - name: my-service
+          image: testgradle
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 80

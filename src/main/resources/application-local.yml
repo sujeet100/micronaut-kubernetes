@@ -3,4 +3,4 @@ micronaut:
     name: testgradle
 
 my:
-  surname: Kamthe
+  name: Sujit

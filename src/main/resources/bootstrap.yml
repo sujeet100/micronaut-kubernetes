@@ -1,0 +1,4 @@
+micronaut:
+  config-client:
+    enabled: true
+    log-level: debug
