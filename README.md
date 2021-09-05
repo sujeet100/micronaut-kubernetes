@@ -1,12 +1,34 @@
-## Micronaut 2.5.11 Documentation
+## Micronaut Kubernetes Spike
 
-- [User Guide](https://docs.micronaut.io/2.5.11/guide/index.html)
-- [API Reference](https://docs.micronaut.io/2.5.11/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/2.5.11/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
----
+Make sure that the docker desktop is running and the kubernetes is enabled
 
-## Feature http-client documentation
+- Build a docker image for the app
+    ```json
+    ./gradlew dockerBuild
+    ```
 
-- [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
+- Create a config map from the yml file
+    ```json
+     kubectl create configmap dev-config --from-file dev-config.yaml
+    ```
 
+- Create a secret my.city
+    ```json
+    kubectl create secret generic my-secret \
+      --from-literal=my.city=London
+    ```
+
+- Create a kubernetes service
+    ```json
+    kubectl apply -f service.yml
+    ```
+
+- Create a kubernetes deployment
+    ```json
+    kubectl apply -f deployment.yml
+    ```
+
+- Port forward on the service
+    ```json
+    kubectl port-forward svc/my-service 8080:80
+    ```

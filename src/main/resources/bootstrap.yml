@@ -2,3 +2,11 @@ micronaut:
   config-client:
     enabled: true
     log-level: debug
+kubernetes:
+  client:
+    secrets:
+      enabled: true
+endpoints:
+  env:
+    enabled: true
+    sensitive: true

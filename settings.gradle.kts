@@ -1,2 +1,2 @@
 
-rootProject.name="testgradle"
+rootProject.name="micronaut-kubernetes"

@@ -1,6 +1,6 @@
 micronaut:
   application:
-    name: testgradle
+    name: micronaut-kubernetes
 
 my:
   surname: Kamthe

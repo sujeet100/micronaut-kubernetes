@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: my-service
-          image: testgradle
+          image: micronaut-kubernetes
           imagePullPolicy: Never
           ports:
             - containerPort: 80

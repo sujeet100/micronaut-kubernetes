@@ -1,6 +1,11 @@
 micronaut:
   application:
-    name: testgradle
+    name: micronaut-kubernetes
 
 my:
   name: Sujit
+
+aerospike:
+  host: localhost
+  port: 3030
+  city: London

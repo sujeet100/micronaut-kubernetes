@@ -9,11 +9,12 @@ import io.micronaut.runtime.context.scope.Refreshable
 @Refreshable
 class MyNameController(
     @Value("\${my.name}") val name: String,
-    @Value("\${my.surname}") val surName: String
+    @Value("\${my.surname}") val surName: String,
+    @Value("\${my.city}") val city: String
 ) {
 
     @Get("/")
     fun getMyName(): String {
-        return "$name $surName"
+        return "$name $surName $city"
     }
 }
